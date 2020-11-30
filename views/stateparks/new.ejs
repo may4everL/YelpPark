@@ -1,0 +1,55 @@
+<% layout('layouts/boilerplate') %>
+<h1 class="text-center">Add A New Park</h1>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form action="/stateparks" method='POST' class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" id='title' name='statepark[title]' class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" id='location' name='statepark[location]' class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <label for="price" class="form-label mb-3">Price: </label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id='price'>$</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+                    name="statepark[price]" required>
+                <span class="input-group-text">.00</span>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <!--             <div class="mb-3">
+                <label for="image" class="form-label">Image Url</label>
+                <input type="text" id='image' name='statepark[image]' class="form-control" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div> -->
+            <div class="mb-3">
+                <label for="description" class="form-label">description</label>
+                <textarea type="text" id='description' name='statepark[description]' class="form-control"
+                    required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <button class="btn btn-primary">Add statepark</button>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="image" name="image" multiple>
+                <label class="custom-file-label" for="image">Choose image(s)</label>
+            </div>
+        </form>
+        <footer>
+            <a href="/stateparks">All stateparks!</a>
+        </footer>
+    </div>
+</div>

@@ -6,8 +6,25 @@ const { cloudinary } = require('../cloudinary');
 
 
 module.exports.showParks = async (req, res) => {
-    const stateparks = await StatePark.find({});
-    res.render('stateparks/index', { stateparks });
+    const parksPerPage = 20;
+    const pageQuery = parseInt(req.query.page);
+    const pageNumber = pageQuery ? pageQuery : 1;//default as the first page
+    StatePark.find({}).skip((parksPerPage * pageNumber) - parksPerPage).limit(parksPerPage).exec(function (err, allParks) {
+        StatePark.count().exec(function (err, count) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.render("stateparks/index", {
+                    stateparks: allParks,
+                    current: pageNumber,
+                    pages: Math.ceil(count / parksPerPage)
+                })
+            }
+        })
+    })
+
+    // const stateparks = await StatePark.find({});
+    // res.render('stateparks/index', { stateparks });
 }
 
 module.exports.showCreatePage = async (req, res) => {

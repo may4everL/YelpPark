@@ -6,7 +6,7 @@ const { cloudinary } = require('../cloudinary');
 
 
 module.exports.showParks = async (req, res) => {
-    const parksPerPage = 20;
+    const parksPerPage = 9;
     const pageQuery = parseInt(req.query.page);
     const pageNumber = pageQuery ? pageQuery : 1;//default as the first page
     StatePark.find({}).skip((parksPerPage * pageNumber) - parksPerPage).limit(parksPerPage).exec(function (err, allParks) {

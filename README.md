@@ -5,12 +5,14 @@
 
 ---
 
-#### Campgrounds Page
-![Campgrounds Index](http://res.cloudinary.com/kledu188833/image/upload/q_auto/v1528865000/Screen_Shot_2018-06-13_at_12.32.19_PM.png "Show Case Page")
+#### Homepage
+![Homepage](https://res.cloudinary.com/dpeqtgy2k/image/upload/v1620814752/YelpPark/yelppark_bun1t3.jpg "Homepage")
 
 ---
-#### User Profile Page
+#### Shared Parks
+![Parks Index](https://res.cloudinary.com/dpeqtgy2k/image/upload/v1620814980/YelpPark/share_parks_page_rjafon.jpg "Show Case Page")
 
-![User Profiles ](http://res.cloudinary.com/kledu188833/image/upload/q_auto/v1528864992/Screen_Shot_2018-06-13_at_12.05.56_PM.png "User ShowCase")
-
+---
+#### Park Profile Page
+![Park](https://res.cloudinary.com/dpeqtgy2k/image/upload/v1620815536/YelpPark/park_detailed_page_rskpbm.jpg "Individual Park Page")
 ---

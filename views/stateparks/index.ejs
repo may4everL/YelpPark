@@ -17,7 +17,7 @@
             <% } %>
             <div class="card">
                     <% if(statepark.images.length) { %>
-                            <img class="card-img-top"
+                            <img class="card-img-top" loading="lazy"
                                 src="<%= statepark.images[Math.floor(Math.random()*statepark.images.length)].url %> "
                                 alt="">
                     <% } %>

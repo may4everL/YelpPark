@@ -10,7 +10,7 @@ module.exports.showParks = async (req, res) => {
     const pageQuery = parseInt(req.query.page);
     const pageNumber = pageQuery ? pageQuery : 1;//default as the first page
     StatePark.find({}).skip((parksPerPage * pageNumber) - parksPerPage).limit(parksPerPage).exec(function (err, allParks) {
-        StatePark.count().exec(function (err, count) {
+        StatePark.countDocuments().exec(function (err, count) {
             if (err) {
                 console.log(err);
             } else {

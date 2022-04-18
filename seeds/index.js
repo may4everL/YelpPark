@@ -3,7 +3,7 @@ const cities = require('./cities');
 const StatePark = require('../models/statepark.js');
 const { places, descriptors } = require('./seedHelpers');
 
-mongoose.connect('mongodb://weis9004:ll15481548@cluster0-shard-00-00-eoh0m.mongodb.net:27017,cluster0-shard-00-01-eoh0m.mongodb.net:27017,cluster0-shard-00-02-eoh0m.mongodb.net:27017/yelppark?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://weis9004:ll15481548@cluster0.eoh0m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true

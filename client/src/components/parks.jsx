@@ -1,5 +1,6 @@
-import axios from 'axios'
 import React, {Component} from 'react'
+import { useSelector } from 'react-redux'
+
 import Park from './park'
 
 class Parks extends Component {
@@ -8,7 +9,7 @@ class Parks extends Component {
     }
 
     async componentDidMount() {
-        const { data } = await axios.get('/stateparks');
+        const data = useSelector((state) => state.parks)
         this.setState({ parks: data })
     }
 

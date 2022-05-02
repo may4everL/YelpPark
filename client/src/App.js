@@ -1,5 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+import { getParks } from './actions/parks'
 import Parks from "./components/parks";
 import Navbar from "./components/navbar";
 import NotFound from "./components/notFound";
@@ -7,6 +10,11 @@ import NewPark from "./components/newPark";
 
 class App extends Component {
   render() {
+    const dispatch = useDispatch();
+    
+    useEffect(() => {
+      dispatch(getParks);
+    }, [dispatch])
     const navBarItem = [
       { label: "parks", to: "/stateparks" },
       { label: "Login", to: "/login" },
